@@ -1,4 +1,4 @@
-  <!-- <?php
+<?php
     $month = $_POST["month"];
     $year = $_POST["year"];
     switch ($month) {
@@ -26,13 +26,11 @@
             echo "Tháng $month năm $year là năm không nhuận nên có 28 ngày";
             break;
     }
-    // default:
-    //     $days = 0;
     }
-    ?> -->
+?> 
 
 <!-- Tìm ngày tiếp theo -->
-    <!-- <?php
+    <?php
     $iday = $_POST["od"];
     $imonth = $_POST["om"];
     $iyear = $_POST["oy"];
@@ -78,7 +76,7 @@
     }elseif($iyear % 400 != 0 or $iyear % 4 != 0 && $iday == 29){
         echo "Tháng $imonth của năm $iyear không phải là năm nhuận nên không ngày thứ 29";
     }
-    ?> -->
+    ?>
 
 <!-- Hiển thị sinh viên học loại gì -->
     <?php
