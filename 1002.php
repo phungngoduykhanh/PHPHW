@@ -155,27 +155,37 @@
 
         // bài 6
         $money=$_POST["money"];
-        $a=0;
-        $b=0;
-        $c=$money;
-        for($i=50;$i<=$money;$i+=50){    
-            $a+=1;
-            $b+=50;
-            $c-=50;
-        }
+        $sl50=floor($money/50);
+        $tt50=$sl50*50;
+        
+        $sl20= floor(($money%50)/20) ;
+        $tt20=$sl20*20;
 
-    
+        $sl5= floor(($money-($tt50+$tt20))/5) ;
+        $tt5=$sl5*5;
+        
+        $sum= $tt50+$tt20+$tt5;
 
         echo "<tr>";
         echo "<th scope='row'>mệnh giá 50k</th>";
-        echo "<td> $a </td>";
-        echo "<td> $b </td>";
+        echo "<td> $sl50 </td>";
+        echo "<td> $tt50 </td>";
         echo "</tr>";
-        // echo $money;
+        echo "<th scope='row'>mệnh giá 20k</th>";
+        echo "<td> $sl20 </td>";
+        echo "<td> $tt20 </td>";
+        echo "</tr>";
+        echo "<th scope='row'>mệnh giá 5k</th>";
+        echo "<td> $sl5 </td>";
+        echo "<td> $tt5 </td>";
+        echo "</tr>";
+        echo "</tbody>";
+        echo "</table>";
+
+        echo " tổng tiền bạn rút là $sum ";
     }
     ?>
-    </tbody>
-    </table>
+  
 
 </body>
 </html>
