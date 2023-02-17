@@ -11,9 +11,9 @@
     <form action="" method="post">
         nhập số tiền bạn muốn rút:<br>
 
-        <input type="text" name="money"><br>
+        <input type="text" name="money" value="<?php if(isset($_POST["money"])){echo $_POST["money"];}?>"><br>
 
-        n:<input type="text" name="n"><br>
+        <!-- n:<input type="text" name="n"><br>
 
         a:<input type="text" name="a"><br>
 
@@ -23,9 +23,9 @@
 
         month:<input type="text" name="month"><br>
 
-        year:<input type="text" name="year"><br>
+        year:<input type="text" name="year"><br> -->
 
-        <input type="submit" name="btn">
+        <input type="submit" name="btn" value="Rút tiền">
 
     </form>
 <table class="table">
@@ -155,34 +155,39 @@
 
         // bài 6
         $money=$_POST["money"];
-        $sl50=floor($money/50);
-        $tt50=$sl50*50;
         
-        $sl20= floor(($money%50)/20) ;
-        $tt20=$sl20*20;
+        if($money%5==0){
 
-        $sl5= floor(($money-($tt50+$tt20))/5) ;
-        $tt5=$sl5*5;
-        
-        $sum= $tt50+$tt20+$tt5;
+          $sl50=floor($money/50);
+          $tt50=$sl50*50;
+  
+          $sl20= floor(($money%50)/20) ;
+          $tt20=$sl20*20;
+  
+          $sl5= floor(($money-($tt50+$tt20))/5) ;
+          $tt5=$sl5*5;
 
-        echo "<tr>";
-        echo "<th scope='row'>mệnh giá 50k</th>";
-        echo "<td> $sl50 </td>";
-        echo "<td> $tt50 </td>";
-        echo "</tr>";
-        echo "<th scope='row'>mệnh giá 20k</th>";
-        echo "<td> $sl20 </td>";
-        echo "<td> $tt20 </td>";
-        echo "</tr>";
-        echo "<th scope='row'>mệnh giá 5k</th>";
-        echo "<td> $sl5 </td>";
-        echo "<td> $tt5 </td>";
-        echo "</tr>";
-        echo "</tbody>";
-        echo "</table>";
-
-        echo " tổng tiền bạn rút là $sum ";
+          echo "<tr>";
+          echo "<th scope='row'>mệnh giá 50k</th>";
+          echo "<td> $sl50 </td>";
+          echo "<td> $tt50 </td>";
+          echo "</tr>";
+          echo "<th scope='row'>mệnh giá 20k</th>";
+          echo "<td> $sl20 </td>";
+          echo "<td> $tt20 </td>";
+          echo "</tr>";
+          echo "<th scope='row'>mệnh giá 5k</th>";
+          echo "<td> $sl5 </td>";
+          echo "<td> $tt5 </td>";
+          echo "</tr>";
+          echo "</tbody>";
+          echo "</table>";
+  
+          echo " Tổng tiền bạn rút là $money ";
+        }else{
+          echo "vui lòng không nhập tiền lẻ";
+        }
+     
     }
     ?>
   
