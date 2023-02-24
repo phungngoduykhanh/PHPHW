@@ -68,7 +68,7 @@
            echo "<script> alert ('đăng nhập sai mat khau') </script>";
            break;
        case 0:
-        //    echo "<script> alert ('Đăng nhập thành công')</script>";
+           echo "<script> alert ('Đăng nhập thành công')</script>";
             echo "<table class='table'>";
             echo    "<thead>";
             echo     " <tr>";
@@ -82,7 +82,7 @@
                 echo "<tbody>";
                 echo    "<tr>";
                 echo    "<th scope='row'>$a</th>";
-                echo   "<td> $name</td>";
+                echo   "<td>$name</td>";
                 echo   "<td>$passwork</td>";
                 echo    "</tr>";
                 $a++;
