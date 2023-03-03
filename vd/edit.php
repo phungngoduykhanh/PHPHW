@@ -47,7 +47,7 @@ if (isset($_GET["id"])) { ?>
                 move_uploaded_file($file["tmp_name"],$tenfile);
             $_SESSION['fruit'][$id]['hinhanh']=$tenfile;
         }
-        header("Location: http://localhost/vd/show.php");
+        header("Location: http://localhost/btphp/vd/show.php");
     }
 }
 ?>

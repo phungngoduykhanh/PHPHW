@@ -13,7 +13,7 @@
             $_SESSION['fruit'][$i]['hinhanh']=$_SESSION['fruit'][$i+1]['hinhanh'];
           }
             unset($_SESSION['fruit'][$n-1]);
-          header("Location: http://localhost/vd/show.php");
+          header("Location: http://localhost/btphp/vd/show.php");
         }
 
     ?>

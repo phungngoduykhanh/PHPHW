@@ -39,7 +39,7 @@ if (isset($_POST['btn'])) {
         move_uploaded_file($file["tmp_name"],$tenfile);
         $_SESSION['fruit'][$n]['hinhanh'] = $tenfile;
 }
-header("Location: http://localhost/vd/show.php");
+header("Location: http://localhost/btphp/vd/show.php");
 }
 ?>
 

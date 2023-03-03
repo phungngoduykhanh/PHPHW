@@ -25,7 +25,7 @@ if (isset($_POST['btn'])) {
         $n2=0;
     $_SESSION['usser'][$n][$n2] = $_POST['ten'];
     $_SESSION['usser'][$n][$n2=$n2+1] = $_POST['pass'];
-    header("Location: http://localhost/vd/showuser.php");
+    header("Location: http://localhost/btphp/vd/showuser.php");
 }
 ?>
 

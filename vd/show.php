@@ -33,15 +33,15 @@
             <td><?php echo $value['giatien']; ?></td>
             <td><?php echo $value['mota']; ?></td>
             <td> <img src="<?php echo $value['hinhanh']; ?>" alt="" height="100" width="100"></td>
-            <td><a name="btnedit" href="http://localhost/vd/edit.php?id=<?php echo $item ?>">Edit </a></td>
-            <td><a href="http://localhost/vd/del.php?id=<?php echo $item ?>">Delete </a></td>
+            <td><a name="btnedit" href="http://localhost/btphp/vd/edit.php?id=<?php echo $item ?>">Edit </a></td>
+            <td><a href="http://localhost/btphp/vd/del.php?id=<?php echo $item ?>">Delete </a></td>
         </tr>
         <?php }
         }
 
         ?>
     </table>
-    <a href="http://localhost/vd/input.php">Nhập tiếp</a>
+    <a href="http://localhost/btphp/vd/input.php">Nhập tiếp</a>
 </body>
 
 </html>

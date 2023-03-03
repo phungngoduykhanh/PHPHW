@@ -12,7 +12,7 @@ if (isset($_SESSION['usser'])) {
         }
     }
     
-    header("Location: http://localhost/vd/showuser.php");
+    header("Location: http://localhost/btphp/vd/showuser.php");
 }
 
 ?>

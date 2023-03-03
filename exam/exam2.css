@@ -1,0 +1,22 @@
+.container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.card{
+    margin: 10px;
+}
+.card-img-top{
+    height: 240px;
+}
+.card-title{
+    display: -webkit-box;
+    max-height: 3.2rem;
+   -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    -webkit-line-clamp: 2;
+    line-height: 1.6rem;
+    height: 50px;
+}
